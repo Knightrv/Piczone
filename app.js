@@ -7,7 +7,7 @@ const app = express();
 mongoose.connect(MONGOURI,{
     useNewUrlParser: true,
     useUnifiedTopology: true
-});
+}).catch(err=>console.log(err));
 
 mongoose.connection.on("connected",()=>{
     console.log("Connected to database");

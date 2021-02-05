@@ -49,6 +49,7 @@ router.post('/register',(req,res)=>{
 });
 
 router.post("/login",(req,res)=>{
+    console.log(req.body);
     const {email,password} = req.body;
     if(!email || !password){
         return res.status(422).json({error: "Please add email or password !!"});
